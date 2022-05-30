@@ -79,14 +79,16 @@ class SearchSome(Resource):
       return 'No ramen reviews found. Check post params again.', 404
     else:
       j = json.dumps(results, indent=2)
-      return f'Searched for ramen reviews. Results are {j}', 200
+      print(f'Searched for ramen reviews. Results are {j}')
+      return j, 200
 #--------------------------------------------------------------------------------
 class SelectAll(Resource):
   def get(self):
     try:
       results = selectall(DATABASE, TABLE)
       j = json.dumps(results, indent=2)
-      return f'Selected all ramen reviews. Results are {j}', 200
+      print(f'Selected all ramen reviews. Results are {j}')
+      return j, 200
     except Exception as e:
       print(e)
       return 'Something went wrong, please try again.', 404
@@ -111,7 +113,7 @@ def docs():
 
 @app.route('/help', methods=['GET','POST'])
 def help():
-    return render_template('help.html')
+    return render_template('help.html')  
 
 
 if __name__ == '__main__':
