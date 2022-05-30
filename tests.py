@@ -1,7 +1,7 @@
 import requests
 import json
 
-'''TEST FOR RAVE RAMEN REVIEWS API'''
+'''TESTS FOR RAVE RAMEN REVIEWS API, EDIT ACCORDINGLY'''
 
 ##url = 'http://127.0.0.1:5000/api/addone'
 ##data = {'hello':None,'brand':'Brand xxxx','country':'USA','ID':'2222222222222222'}
@@ -34,6 +34,11 @@ import json
 ##url = 'http://127.0.0.1:5000/api/searchsome'
 ##data = {'keyword':'seaweed','sortby':'country'}
 ##r = requests.put(url, data=data)
+##print(r.json())
+
+
+##url = 'http://127.0.0.1:5000/api/selectall'
+##r = requests.get(url)
 ##print(r.json())
 
 
