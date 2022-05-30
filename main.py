@@ -113,25 +113,6 @@ def docs():
 def help():
     return render_template('help.html')
 
-  
-##@app.route('/search', methods=['POST'])
-##def search():
-##    if request.method == 'POST':
-##        search = request.form.get('search')
-##        terms = ['SURFACE CAR PARK', 'MULTI-STOREY CAR PARK']
-##        if search.upper() in terms:
-##            d = []
-##            for i in rec:
-##                if i['car_park_type'] == search:
-##                    d.append(i)
-##            return render_template('index.html', data=d)
-##
-##        else:
-##            return render_template('index.html', data=None)
-##    else:
-##        return render_template('index.html', data=None)
-    
-
 
 if __name__ == '__main__':
     app.run(debug=True)
