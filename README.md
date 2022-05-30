@@ -1,5 +1,5 @@
 # RaveRamenReviews
-A repository for a ramen review api in Python
+A repository for a ramen review API in Python
 
 ## Disclaimer:
 1. NONE
