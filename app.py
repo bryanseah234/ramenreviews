@@ -84,10 +84,12 @@ class SearchSome(Resource):
 class SelectAll(Resource):
   def get(self):
     try:
-      selectall(DATABASE, TABLE)
+      results = selectall(DATABASE, TABLE)
+      j = json.dumps(results, indent=2)
+      return f'Selected all ramen reviews. Results are {j}', 200
     except Exception as e:
       print(e)
-    return 'Selected all ramen reviews.', 200
+      return 'Something went wrong, please try again.', 404
 #--------------------------------------------------------------------------------
 api.add_resource(CreateOne, '/api/createone') #no need args (get)
 api.add_resource(SearchSome, '/api/searchsome')
