@@ -1,0 +1,15 @@
+{
+  "background_color": "#585013",
+  "description": "Giving your ramen reviews a voice.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "static/images/ramen.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Rave Ramen Reviews 🍜",
+  "short_name": "Rave Ramen Reviews 🍜",
+  "start_url": "/templates/home.html"
+}
