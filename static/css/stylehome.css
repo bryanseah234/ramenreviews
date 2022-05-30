@@ -1,0 +1,223 @@
+/* FOR HOME HTML */
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#map {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.custom-map-control-button {
+  appearance: button;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 0.5em;
+  height: 40px;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+
+.btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }
+.btn-large { padding: 9px 9px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
+.btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }
+.btn-primary.active { color: rgba(255, 255, 255, 0.75); }
+.btn-primary { background-color: #585013; background-image: -moz-linear-gradient(top, #C4A75A, #585013); background-image: -ms-linear-gradient(top, #C4A75A, #585013); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#C4A75A), to(#585013)); background-image: -webkit-linear-gradient(top, #C4A75A, #585013); background-image: -o-linear-gradient(top, #C4A75A, #585013); background-image: linear-gradient(top, #C4A75A, #585013); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#C4A75A, endColorstr=#585013, GradientType=0);  border: 1px solid #585013; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #585013; }
+.btn-block { width: 100%; display:block; }
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+html { width: 100%; height:100%; overflow-y: scroll; overflow-x: hidden;}
+
+body {
+	width: 100%;
+	height: 100%;
+    margin: 0;
+	font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+	background: #4F3B08;
+	color: #fff;
+	font-size: 30px;
+    position: absolute;
+	text-align:center;
+	letter-spacing:1.2px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background: -moz-radial-gradient(0% 79%, ellipse cover, rgba(196, 167, 90, 0.479) 20%,rgba(204, 132, 117, 0.631) 57%),-moz-linear-gradient(top,  rgba(145, 79, 3, 0.25) 17%, rgba(88, 80, 19, 0.342) 100%), -moz-linear-gradient(-45deg,  #585013 18%, #C4A75A 100%);
+	background: -webkit-radial-gradient(0% 79%, ellipse cover, rgba(196, 167, 90, 0.479) 20%,rgba(204, 132, 117, 0.575) 57%), -webkit-linear-gradient(top,  rgba(145, 79, 3, 0.25) 17%,rgba(88, 80, 19, 0.342) 100%), -webkit-linear-gradient(-45deg,  #585013 18%,#C4A75A 100%);
+	background: -o-radial-gradient(0% 79%, ellipse cover, rgba(196, 167, 90, 0.479) 20%,rgba(204, 132, 117, 0.631) 57%), -o-linear-gradient(top,  rgba(145, 79, 3, 0.25) 17%,rgba(88, 80, 19, 0.342) 100%), -o-linear-gradient(-45deg,  #585013 18%,#C4A75A 100%);
+	background: -ms-radial-gradient(0% 79%, ellipse cover,rgba(196, 167, 90, 0.479) 20%,rgba(204, 132, 117, 0.631) 57%), -ms-linear-gradient(top,  rgba(145, 79, 3, 0.25) 17%,rgba(88, 80, 19, 0.342) 100%), -ms-linear-gradient(-45deg,  #585013 18%,#C4A75A 100%);
+	background: -webkit-radial-gradient(0% 79%, ellipse cover, rgba(196, 167, 90, 0.479) 20%,rgba(204, 132, 117, 0.631) 57%), linear-gradient(to bottom,  rgba(145, 79, 3, 0.25) 17%,rgba(88, 80, 19, 0.342) 100%), linear-gradient(135deg,  #585013 18%,#C4A75A 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585013', endColorstr='#C4A75A',GradientType=1 );
+}
+
+
+.footer {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    vertical-align: bottom;
+    position: relative;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: #585013;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}   
+
+.footer_contents {
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+input {
+	width: 70%;
+	margin-bottom: 15px;
+	background: rgba(0,0,0,0.3);
+    display: inline;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+
+a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(213, 216, 34);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(75, 69, 27);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    border: 15px;
+    border-color: white;
+    border-collapse: collapse;
+    padding: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+th {
+    height: 35px;
+    text-align: center;
+    padding: 10px;
+    background-color: #d2b27993;
+    color: white;
+    border-color: white;
+}
+
+tr {
+    height: 35px;
+    text-align: center;
+    padding: 10px;
+    background-color: #d2b27993;
+    color: white;
+    border-color: white;
+}
+
+tr {
+    color: white;
+    border-color: white;
+}
+
+th:hover {
+    background-color: rgb(75, 69, 27);
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 70%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d2b27993; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border-radius: 50%; 
+  background: rgb(75, 69, 27);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgb(75, 69, 27);
+  cursor: pointer;
+}
+
+
