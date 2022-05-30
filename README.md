@@ -14,4 +14,4 @@ https://rave-ramenapi.herokuapp.com
 3. Run the 'app.py' file to start
 
 ## Features:
-See [documentation](templates/documentations.html)
+See [documentation](templates/documentation.html)
