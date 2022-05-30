@@ -2,7 +2,7 @@ import csv
 import json
 from flask import Flask,render_template,request,redirect,url_for
 from flask_restful import Api,Resource,reqparse
-from functions import createone,insertall,insertone,searchsome,searchsome,searchsome,updatesome,deleteall,deletesome
+from functions import createone,insertall,insertone,searchsome,searchsome,searchsome,updatesome,deleteall,deletesome,selectall
 
 
 app = Flask(__name__)
@@ -81,6 +81,14 @@ class SearchSome(Resource):
       j = json.dumps(results, indent=2)
       return f'Searched for ramen reviews. Results are {j}', 200
 #--------------------------------------------------------------------------------
+class SelectAll(Resource):
+  def get(self):
+    try:
+      selectall(DATABASE, TABLE)
+    except Exception as e:
+      print(e)
+    return 'Selected all ramen reviews.', 200
+#--------------------------------------------------------------------------------
 api.add_resource(CreateOne, '/api/createone') #no need args (get)
 api.add_resource(SearchSome, '/api/searchsome')
 api.add_resource(DeleteAll, '/api/deleteall') #no need args (get)
@@ -88,6 +96,7 @@ api.add_resource(DeleteSome, '/api/deletesome')
 api.add_resource(EditSome, '/api/editsome')
 api.add_resource(AddMany, '/api/addmany') #no need args (get)
 api.add_resource(AddOne, '/api/addone')
+api.add_resource(SelectAll, '/api/selectall') #no need args (get)
 #--------------------------------------------------------------------------------
 @app.route('/', methods=['GET'])
 def home():

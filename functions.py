@@ -137,8 +137,7 @@ def deleteall(databasename, tablename):
     conn.commit()
     conn.close()
     return True
-
-
+    
 
 def deletesome(databasename, tablename, dic):
     searchkeys = ['ID','Country','Brand','Type','Package','Rating']
@@ -364,9 +363,33 @@ def searchsome(databasename, tablename, dic):
         return records #list of dicts
 
 
+
+def selectall(databasename, tablename):
+    print('Returning all records in table')
+
+    selectallrecords = f'''
+    SELECT *
+    FROM {tablename}
+    '''
+    
+    conn = sqlite3.connect(f'{databasename}.db')
+    cur = conn.cursor()
+    count = len(cur.execute(selectallrecords).fetchall())
+    print(f'Found {count} records')
+    
+    conn.row_factory = dictfactory
+    cur = conn.cursor()
+    records = cur.execute(selectallrecords).fetchall()
+    conn.commit()
+    conn.close()
+    return records #list of dicts
+
+
+
 if __name__ == "__main__":
-    createone('ratings','Ratings')
-    insertall('ratings','ratings')
+##    createone('ratings','Ratings')
+##    insertall('ratings','ratings')
+    print(selectall('ratings','Ratings'))
 ##    insertone('ratings','Ratings', {'brand':'Brand xxxx','country':'XXXX','ID':'2222222222222222'})
 ##    searchsome('ratings','Ratings', {'brand':'Brand A','country':'USA','Sortby':'country'})
 ##    searchsome('ratings','Ratings', {'country':'USA','sortby':'country','keyword':'instant'})
