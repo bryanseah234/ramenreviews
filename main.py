@@ -113,8 +113,13 @@ def docs():
 
 @app.route('/help', methods=['GET','POST'])
 def help():
-    return render_template('help.html')  
+    return render_template('help.html')
+
+@app.route('/display', methods=['GET'])
+def display():
+    data = selectall(DATABASE, TABLE)
+    return render_template('display.html', data=data)    
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
