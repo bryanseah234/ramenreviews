@@ -1,20 +1,21 @@
 # Rave Ramen Reviews 🍜
 
-A RESTful API for managing and querying ramen reviews built with Python and Flask.
+A RESTful API for managing and querying ramen reviews built with Python and Flask
 
 ## Description
 
-Rave Ramen Reviews is a RESTful API that provides programmatic access to ramen review data. Users can create, read, update, and delete ramen reviews through simple API endpoints. The application uses SQLite for data storage and supports bulk operations from CSV files, making it easy to manage large datasets of ramen reviews.
+Rave Ramen Reviews is a comprehensive REST API that allows users to create, read, update, and delete ramen review data. The API stores ramen information including brand, country of origin, type, packaging, and ratings in a SQLite database. It provides both programmatic API access and a web-based documentation interface for easy integration.
 
 ## Features
 
-- Create, Read, Update, and Delete (CRUD) operations for ramen reviews
-- Bulk import reviews from CSV files
-- Search reviews by multiple criteria (Brand, Country, Type, Rating, etc.)
-- Sort search results by any field
-- Keyword-based search for finding specific ramen types
-- RESTful API design with proper HTTP status codes
-- Built-in API documentation page
+- Create and manage a SQLite database for ramen reviews
+- Add single or bulk ramen reviews from CSV files
+- Search reviews with flexible filtering and sorting options
+- Edit existing reviews with partial update support
+- Delete individual or all reviews
+- RESTful API endpoints with JSON responses
+- Web-based API documentation
+- Keyword search functionality for ramen types
 
 ## Technologies Used
 
@@ -45,7 +46,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-The API will be available at `http://127.0.0.1:5000`
+The API will be available at `http://127.0.0.1:5000/`
 
 ### API Endpoints
 
@@ -55,16 +56,23 @@ The API will be available at `http://127.0.0.1:5000`
 | `/api/addone` | PUT | Add a single ramen review |
 | `/api/addmany` | GET | Import reviews from CSV file |
 | `/api/searchsome` | PUT | Search reviews with filters |
-| `/api/selectall` | GET | Get all ramen reviews |
+| `/api/selectall` | GET | Get all reviews |
 | `/api/editsome` | PUT | Update existing reviews |
 | `/api/deletesome` | PUT | Delete specific reviews |
 | `/api/deleteall` | GET | Delete all reviews |
 
-Visit `/documentation` for detailed API documentation.
+### Example Request
+
+```bash
+# Search for ramen reviews by brand
+curl -X PUT http://127.0.0.1:5000/api/searchsome \
+  -d "brand=Brand A" \
+  -d "sortby=rating"
+```
 
 ## Demo
 
-~~https://rave-ramenapi.herokuapp.com~~ (Heroku free tier discontinued)
+~~https://rave-ramenapi.herokuapp.com~~ (No longer available)
 
 ## Disclaimer
 
