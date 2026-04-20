@@ -21,10 +21,10 @@ Rave Ramen Reviews is a comprehensive REST API that allows users to create, read
 
 - Python 3
 - Flask (Web Framework)
-- Flask-RESTful (REST API)
+- Flask-RESTful (REST API Extension)
 - SQLite (Database)
 - HTML/CSS/JavaScript (Documentation UI)
-- Gunicorn (Production Server)
+- Gunicorn (WSGI Server for deployment)
 
 ## Installation
 
