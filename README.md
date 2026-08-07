@@ -30,7 +30,7 @@ Rave Ramen Reviews is a comprehensive REST API that allows users to create, read
 
 ```bash
 # Clone the repository
-git clone https://github.com/bryanseah234/ramenreviews.git
+git clone https://github.com/hongyime/ramenreviews.git
 
 # Navigate to project directory
 cd ramenreviews
@@ -85,4 +85,4 @@ MIT License
 
 ---
 
-**Author:** <a href="https://github.com/bryanseah234">bryanseah234</a>
+**Author:** <a href="https://github.com/hongyime">hongyime</a>
